@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { Menu, X, ChevronDown, Moon, Sun, User } from "lucide-react";
+import { Menu, X, ChevronDown, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -122,6 +122,8 @@ export default function Navbar() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [openSubDropdown, setOpenSubDropdown] = useState<string | null>(null);
 
+  const navbarRef = useRef<HTMLDivElement>(null); // ref 추가
+
   const toggleDropdown = (title: string) => {
     setOpenDropdown(openDropdown === title ? null : title);
     setOpenSubDropdown(null);
@@ -131,8 +133,28 @@ export default function Navbar() {
     setOpenSubDropdown(openSubDropdown === year ? null : year);
   };
 
+  // Navbar 외부 클릭 감지
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        navbarRef.current &&
+        !navbarRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false); // 바깥 클릭 시 메뉴 닫기
+        setOpenDropdown(null);
+        setOpenSubDropdown(null);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    <header className="w-full fixed top-0 left-0 z-50 bg-white dark:bg-[#1a1a1f] shadow dark:shadow-[0_1px_0_0_#a9a9ab]">
+    <header
+      ref={navbarRef}
+      className="w-full fixed top-0 left-0 z-50 bg-white dark:bg-[#1a1a1f] shadow dark:shadow-[0_1px_0_0_#a9a9ab]"
+    >
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* 왼쪽 로고 */}
         <Link href="/" className="font-bold text-xl">
@@ -164,7 +186,7 @@ export default function Navbar() {
                       {item.subItems?.map((year) => (
                         <div key={year.year} className="relative">
                           <button
-                            className="flex justify-between w-full items-center p-2 hover:bg-[#404040] rounded"
+                            className="flex justify-between w-full items-center p-2 hover:bg-gray-100 dark:hover:bg-[#404040] rounded"
                             onClick={() => toggleSubDropdown(year.year)}
                           >
                             {year.year}
@@ -193,9 +215,7 @@ export default function Navbar() {
               )}
             </div>
           ))}
-          <Button variant="ghost" size="icon" className="p-2.5">
-            <User className="h-[1.5rem] w-[1.5rem]" />
-          </Button>
+
           <ModeToggle />
         </div>
 
@@ -213,7 +233,7 @@ export default function Navbar() {
         <div className="lg:hidden bg-white border-t shadow dark:bg-[#1a1a1f]">
           <div className="flex flex-col p-4 gap-4">
             {navigationItems.map((item) => (
-              <div key={item.title} className="flex flex-col gap-2">
+              <div key={item.title} className="flex flex-col">
                 {item.href ? (
                   <Link href={item.href} className="font-semibold">
                     {item.title}
@@ -242,7 +262,7 @@ export default function Navbar() {
                               <Link
                                 key={month.title}
                                 href={month.href}
-                                className="pl-8 text-sm block"
+                                className="pl-7 py-1 text-sm block"
                               >
                                 {month.title}
                               </Link>
