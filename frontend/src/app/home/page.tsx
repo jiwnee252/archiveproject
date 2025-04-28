@@ -6,11 +6,6 @@ import { useScreenSize } from '@/hooks/use-screen-size'
 import DragElements from '@/fancy/components/blocks/drag-elements'
 
 const urls = [
-  // '/home_images/image1.jpg',
-  // '/home_images/image2.jpg',
-  // '/home_images/image3.jpg',
-  // '/home_images/image4.jpg',
-  // '/home_images/image5.jpg',
   '/home_images/image6.jpg',
   '/home_images/image7.jpg',
   '/home_images/image8.jpg',
@@ -73,7 +68,7 @@ export default function HomePage() {
 
   // 초기화가 안 됐을 때만 로딩 표시
   if (!initialized || imagePositions.length === 0) {
-    return <div className="fixed inset-0 flex items-center justify-center">Loading...</div>
+    return <div className="fixed inset-0 flex items-center justify-center font-bold text-xl">Loading...</div>
   }
 
   return (
