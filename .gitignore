@@ -234,4 +234,8 @@ sketch
 pyvenv.cfg
 pip-selfcheck.json
 
-# End of https://www.toptal.com/developers/gitignore/api/react,django,nextjs,venv
+# Tailwind
+.tailwind/
+
+# VSCode settings (혹시 쓰고 있으면)
+.vscode/
