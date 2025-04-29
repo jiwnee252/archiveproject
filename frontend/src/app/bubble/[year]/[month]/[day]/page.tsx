@@ -38,7 +38,7 @@ export default function ChatPage() {
           />
         </div>
       </ChatCard>
-      <div className="flex justify-center pt-6">
+      <div className="flex justify-center">
         <BubblePagination />
       </div>
     </div>
