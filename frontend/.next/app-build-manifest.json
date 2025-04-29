@@ -11,15 +11,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
     ],
-    "/search/page": [
+    "/weverse/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/search/page.js"
-    ],
-    "/guide/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/guide/page.js"
+      "static/chunks/app/weverse/page.js"
     ],
     "/page": [
       "static/chunks/webpack.js",
