@@ -1,4 +1,4 @@
-// File: C:\Users\user\Desktop\myproject\archiveproject\frontend\src\app\weverse\page.tsx
+// File: C:\Users\SSAFY\Desktop\archiveproject\frontend\src\app\weverse\page.tsx
 import * as entry from '../../../../src/app/weverse/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

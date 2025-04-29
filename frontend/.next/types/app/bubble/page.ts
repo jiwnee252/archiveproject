@@ -1,4 +1,4 @@
-// File: C:\Users\user\Desktop\myproject\archiveproject\frontend\src\app\bubble\page.tsx
+// File: C:\Users\SSAFY\Desktop\archiveproject\frontend\src\app\bubble\page.tsx
 import * as entry from '../../../../src/app/bubble/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
