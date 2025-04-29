@@ -1,11 +1,24 @@
-'use client'
-import { useParams } from 'next/navigation'
-import Link from 'next/link'
+"use client";
+import { useParams } from "next/navigation";
+import Link from "next/link";
 
 export default function BubbleYearPage() {
-  const { year } = useParams<{ year: string }>()
+  const { year } = useParams<{ year: string }>();
 
-  const months = ['sep', 'oct', 'nov']
+  const months = [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+  ];
 
   return (
     <div className="p-8">
@@ -13,12 +26,15 @@ export default function BubbleYearPage() {
       <ul className="space-y-4">
         {months.map((month) => (
           <li key={month}>
-            <Link href={`/bubble/${year}/${month}`} className="text-blue-500 underline">
+            <Link
+              href={`/bubble/${year}/${month}`}
+              className="text-blue-500 underline"
+            >
               {month}
             </Link>
           </li>
         ))}
       </ul>
     </div>
-  )
+  );
 }

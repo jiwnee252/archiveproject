@@ -1,4 +1,7 @@
 {
-  "/weverse/page": "app/weverse/page.js",
-  "/bubble/[year]/page": "app/bubble/[year]/page.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/search/page": "app/search/page.js",
+  "/home/page": "app/home/page.js",
+  "/page": "app/page.js",
+  "/guide/page": "app/guide/page.js"
 }

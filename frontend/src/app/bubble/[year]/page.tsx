@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function BubbleYearPage() {
   const { year } = useParams<{ year: string }>();
 
-  const months = ["sep", "oct", "nov"];
+  const months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
 
   return (
     <div className="p-8">

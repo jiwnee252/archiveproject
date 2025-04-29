@@ -53,8 +53,9 @@ export default function BubbleMonthPage() {
 
   return (
     <div className="p-8">
-      <h1 className="text-3xl font-bold mb-8">
-        {year}년 {month}월 날짜 선택
+      <h1 className="text-2xl font-bold mb-8">
+        {/* {year}년 {month}월 날짜 선택 */}
+        pick a date
       </h1>
 
       {/* 캘린더 */}
@@ -71,7 +72,7 @@ export default function BubbleMonthPage() {
       </div>
 
       {/* 날짜 리스트 */}
-      <ul className="space-y-4">
+      {/* <ul className="space-y-4">
         {days.map((day) => (
           <li key={day}>
             <Link
@@ -82,7 +83,7 @@ export default function BubbleMonthPage() {
             </Link>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 }

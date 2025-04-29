@@ -5,7 +5,7 @@ import { CommentCard } from "@/components/ui/comment-card";
 
 export default function GuidePage() {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen mx-12 ">
+    <div className="flex flex-col justify-center items-center mx-12 select-none">
       <ArticleCard>
         <h1 className="text-4xl text-center font-bold mb-4">guide</h1>
         <div className="p-6 space-y-4">
