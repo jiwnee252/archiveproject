@@ -1,7 +1,7 @@
-'use client'
-import Link from 'next/link'
-import { ArticleCard } from '@/components/ui/article-card'
-import { CommentCard } from '@/components/ui/comment-card'
+"use client";
+import Link from "next/link";
+import { ArticleCard } from "@/components/ui/article-card";
+import { CommentCard } from "@/components/ui/comment-card";
 
 export default function GuidePage() {
   return (
@@ -23,13 +23,14 @@ export default function GuidePage() {
           <ul className="list-disc list-inside">
             <li>all photos n videos</li>
             {/* <li>working...</li> */}
-          </ul>{' '}
+          </ul>{" "}
           <br />
           <div>
             <p className="text-center">
-              lorem ipsum search pos change lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor
-              incididunt ut laborelorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor
-              incididunt ut labore
+              lorem ipsum search pos change lorem ipsum dolor sit amet
+              consectetur adipiscing elit sed do eiusmod tempor incididunt ut
+              laborelorem ipsum dolor sit amet consectetur adipiscing elit sed
+              do eiusmod tempor incididunt ut labore
             </p>
           </div>
           <br />
@@ -40,5 +41,5 @@ export default function GuidePage() {
       </ArticleCard>
       {/* <CommentCard /> */}
     </div>
-  )
+  );
 }

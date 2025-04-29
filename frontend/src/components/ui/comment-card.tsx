@@ -1,24 +1,24 @@
-import * as React from 'react'
-import Image from 'next/image'
-import { Button } from '@/components/ui/button'
+import * as React from "react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   // CardFooter,
   CardHeader,
-} from '@/components/ui/card'
+} from "@/components/ui/card";
 
 export function CommentCard() {
   const commentData = {
-    profileImage: '/profile_images/profile.jpg', // public/images/profile.png 경로에 더미 이미지 넣기
-    name: '이름',
-    datetime: '2025-04-28 18:30',
+    profileImage: "/profile_images/profile.jpg",
+    name: "이름",
+    datetime: "2025-04-28 18:30",
     content:
-      '댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 댓글의내용 ',
-  }
+      "안녕하세요 댓글입니다 댓글처음달아봅니다 안녕하시죠 배가고프네요 이건제댓글이고요 무플방지위원회 ",
+  };
 
   return (
-    <Card className="w-[400px] shadow-md">
+    <Card className="w-[400px] shadow-md m-auto">
       <CardHeader className="flex flex-row items-center gap-3 py-0 mx-0">
         <div>
           <div>
@@ -32,8 +32,12 @@ export function CommentCard() {
                   className="rounded-full object-cover"
                   style={{ aspectRatio: 1 }}
                 />
-                <span className="font-semibold text-black text-sm">{commentData.name}</span>
-                <span className="text-xs text-gray-500">{commentData.datetime}</span>
+                <span className="font-semibold text-black text-sm">
+                  {commentData.name}
+                </span>
+                <span className="text-xs text-gray-500">
+                  {commentData.datetime}
+                </span>
               </div>
             </div>
           </div>
@@ -43,5 +47,5 @@ export function CommentCard() {
         <p className="text-gray-800 text-sm">{commentData.content}</p>
       </CardContent>
     </Card>
-  )
+  );
 }
