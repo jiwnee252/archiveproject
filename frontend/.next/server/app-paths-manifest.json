@@ -1,4 +1,9 @@
 {
+  "/bubble/[year]/[month]/page": "app/bubble/[year]/[month]/page.js",
+  "/bubble/page": "app/bubble/page.js",
+  "/bubble/[year]/[month]/[day]/page": "app/bubble/[year]/[month]/[day]/page.js",
   "/page": "app/page.js",
-  "/home/page": "app/home/page.js"
+  "/home/page": "app/home/page.js",
+  "/guide/page": "app/guide/page.js",
+  "/bubble/[year]/page": "app/bubble/[year]/page.js"
 }

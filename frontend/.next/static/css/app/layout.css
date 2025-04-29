@@ -70,7 +70,7 @@
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/app/globals.css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************/
 /*! tailwindcss v4.1.4 | MIT License | https://tailwindcss.com */
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
 @layer properties;
 @font-face {
   font-family: 'Pretendard';
@@ -130,12 +130,14 @@
 @layer theme {
   :root, :host {
     --color-blue-500: oklch(62.3% 0.214 259.815);
-    --color-gray-100: oklch(96.7% 0.003 264.542);
-    --color-gray-300: oklch(87.2% 0.01 258.338);
-    --color-gray-500: oklch(55.1% 0.027 264.364);
-    --color-gray-600: oklch(44.6% 0.03 256.802);
-    --color-gray-700: oklch(37.3% 0.034 259.733);
-    --color-gray-800: oklch(27.8% 0.033 256.848);
+    --color-neutral-100: oklch(97% 0 0);
+    --color-neutral-300: oklch(87% 0 0);
+    --color-neutral-400: oklch(70.8% 0 0);
+    --color-neutral-500: oklch(55.6% 0 0);
+    --color-neutral-600: oklch(43.9% 0 0);
+    --color-neutral-700: oklch(37.1% 0 0);
+    --color-neutral-800: oklch(26.9% 0 0);
+    --color-neutral-900: oklch(20.5% 0 0);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -404,6 +406,9 @@
   .left-2\.5 {
     left: calc(var(--spacing) * 2.5);
   }
+  .left-4 {
+    left: calc(var(--spacing) * 4);
+  }
   .left-\[50\%\] {
     left: 50%;
   }
@@ -452,9 +457,6 @@
       max-width: 96rem;
     }
   }
-  .m-0 {
-    margin: calc(var(--spacing) * 0);
-  }
   .m-auto {
     margin: auto;
   }
@@ -482,9 +484,6 @@
   .mt-auto {
     margin-top: auto;
   }
-  .mr-2 {
-    margin-right: calc(var(--spacing) * 2);
-  }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
@@ -496,9 +495,6 @@
   }
   .ml-1 {
     margin-left: calc(var(--spacing) * 1);
-  }
-  .ml-2 {
-    margin-left: calc(var(--spacing) * 2);
   }
   .block {
     display: block;
@@ -574,15 +570,6 @@
   .h-\[80px\] {
     height: 80px;
   }
-  .h-\[200px\] {
-    height: 200px;
-  }
-  .h-\[300px\] {
-    height: 300px;
-  }
-  .h-\[400px\] {
-    height: 400px;
-  }
   .h-\[calc\(100\%-60px\)\] {
     height: calc(100% - 60px);
   }
@@ -643,9 +630,6 @@
   .w-\[400px\] {
     width: 400px;
   }
-  .w-\[500px\] {
-    width: 500px;
-  }
   .w-\[calc\(50\%-1px\)\] {
     width: calc(50% - 1px);
   }
@@ -654,9 +638,6 @@
   }
   .w-full {
     width: 100%;
-  }
-  .w-screen {
-    width: 100vw;
   }
   .max-w-\[calc\(100\%-2rem\)\] {
     max-width: calc(100% - 2rem);
@@ -780,9 +761,6 @@
   .gap-7 {
     gap: calc(var(--spacing) * 7);
   }
-  .gap-\[30px\] {
-    gap: 30px;
-  }
   .space-y-4 {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
@@ -872,11 +850,11 @@
     --tw-border-style: none;
     border-style: none;
   }
-  .border-gray-300 {
-    border-color: var(--color-gray-300);
-  }
   .border-input {
     border-color: var(--input);
+  }
+  .border-neutral-300 {
+    border-color: var(--color-neutral-300);
   }
   .border-t-transparent {
     border-top-color: transparent;
@@ -914,8 +892,8 @@
   .bg-destructive {
     background-color: var(--destructive);
   }
-  .bg-gray-100 {
-    background-color: var(--color-gray-100);
+  .bg-neutral-100 {
+    background-color: var(--color-neutral-100);
   }
   .bg-primary {
     background-color: var(--primary);
@@ -928,12 +906,6 @@
   }
   .bg-white {
     background-color: var(--color-white);
-  }
-  .bg-white\/80 {
-    background-color: color-mix(in srgb, #fff 80%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-white) 80%, transparent);
-    }
   }
   .object-cover {
     object-fit: cover;
@@ -961,9 +933,6 @@
   }
   .p-px {
     padding: 1px;
-  }
-  .px-2 {
-    padding-inline: calc(var(--spacing) * 2);
   }
   .px-2\.5 {
     padding-inline: calc(var(--spacing) * 2.5);
@@ -1004,11 +973,17 @@
   .pt-16 {
     padding-top: calc(var(--spacing) * 16);
   }
+  .pr-8 {
+    padding-right: calc(var(--spacing) * 8);
+  }
   .pb-2 {
     padding-bottom: calc(var(--spacing) * 2);
   }
   .pb-6 {
     padding-bottom: calc(var(--spacing) * 6);
+  }
+  .pl-2 {
+    padding-left: calc(var(--spacing) * 2);
   }
   .pl-4 {
     padding-left: calc(var(--spacing) * 4);
@@ -1101,17 +1076,23 @@
   .text-foreground {
     color: var(--foreground);
   }
-  .text-gray-500 {
-    color: var(--color-gray-500);
-  }
-  .text-gray-600 {
-    color: var(--color-gray-600);
-  }
-  .text-gray-800 {
-    color: var(--color-gray-800);
-  }
   .text-muted-foreground {
     color: var(--muted-foreground);
+  }
+  .text-neutral-500 {
+    color: var(--color-neutral-500);
+  }
+  .text-neutral-600 {
+    color: var(--color-neutral-600);
+  }
+  .text-neutral-700 {
+    color: var(--color-neutral-700);
+  }
+  .text-neutral-800 {
+    color: var(--color-neutral-800);
+  }
+  .text-neutral-900 {
+    color: var(--color-neutral-900);
   }
   .text-primary {
     color: var(--primary);
@@ -1134,6 +1115,11 @@
   .antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+  .placeholder-neutral-400 {
+    &::placeholder {
+      color: var(--color-neutral-400);
+    }
   }
   .opacity-50 {
     opacity: 50%;
@@ -1333,10 +1319,10 @@
       }
     }
   }
-  .hover\:bg-gray-100 {
+  .hover\:bg-neutral-100 {
     &:hover {
       @media (hover: hover) {
-        background-color: var(--color-gray-100);
+        background-color: var(--color-neutral-100);
       }
     }
   }
@@ -1419,6 +1405,12 @@
       color: var(--primary-foreground);
     }
   }
+  .focus\:ring-0 {
+    &:focus {
+      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
   .focus\:ring-2 {
     &:focus {
       --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
@@ -1446,15 +1438,15 @@
       }
     }
   }
+  .focus\:outline-none {
+    &:focus {
+      --tw-outline-style: none;
+      outline-style: none;
+    }
+  }
   .focus-visible\:border-ring {
     &:focus-visible {
       border-color: var(--ring);
-    }
-  }
-  .focus-visible\:ring-0 {
-    &:focus-visible {
-      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
-      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
   }
   .focus-visible\:ring-1 {
@@ -1488,12 +1480,6 @@
       @supports (color: color-mix(in lab, red, red)) {
         --tw-ring-color: color-mix(in oklab, var(--ring) 50%, transparent);
       }
-    }
-  }
-  .focus-visible\:ring-offset-0 {
-    &:focus-visible {
-      --tw-ring-offset-width: 0px;
-      --tw-ring-offset-shadow: var(--tw-ring-inset,) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
     }
   }
   .focus-visible\:outline-1 {
@@ -1733,19 +1719,14 @@
       line-height: var(--tw-leading, var(--text-8xl--line-height));
     }
   }
-  .dark\:border-gray-600 {
-    &:is(.dark *) {
-      border-color: var(--color-gray-600);
-    }
-  }
   .dark\:border-input {
     &:is(.dark *) {
       border-color: var(--input);
     }
   }
-  .dark\:bg-\[\#1a1a1f\] {
+  .dark\:border-neutral-600 {
     &:is(.dark *) {
-      background-color: #1a1a1f;
+      border-color: var(--color-neutral-600);
     }
   }
   .dark\:bg-\[\#2c2c34\] {
@@ -1761,17 +1742,22 @@
       }
     }
   }
-  .dark\:bg-gray-800 {
-    &:is(.dark *) {
-      background-color: var(--color-gray-800);
-    }
-  }
   .dark\:bg-input\/30 {
     &:is(.dark *) {
       background-color: var(--input);
       @supports (color: color-mix(in lab, red, red)) {
         background-color: color-mix(in oklab, var(--input) 30%, transparent);
       }
+    }
+  }
+  .dark\:bg-neutral-800 {
+    &:is(.dark *) {
+      background-color: var(--color-neutral-800);
+    }
+  }
+  .dark\:bg-neutral-900 {
+    &:is(.dark *) {
+      background-color: var(--color-neutral-900);
     }
   }
   .dark\:bg-white {
@@ -1784,14 +1770,31 @@
       color: var(--color-black);
     }
   }
-  .dark\:text-gray-300 {
+  .dark\:text-neutral-100 {
     &:is(.dark *) {
-      color: var(--color-gray-300);
+      color: var(--color-neutral-100);
+    }
+  }
+  .dark\:text-neutral-300 {
+    &:is(.dark *) {
+      color: var(--color-neutral-300);
+    }
+  }
+  .dark\:text-neutral-400 {
+    &:is(.dark *) {
+      color: var(--color-neutral-400);
     }
   }
   .dark\:text-white {
     &:is(.dark *) {
       color: var(--color-white);
+    }
+  }
+  .dark\:placeholder-neutral-500 {
+    &:is(.dark *) {
+      &::placeholder {
+        color: var(--color-neutral-500);
+      }
     }
   }
   .dark\:shadow-\[0_1px_0_0_\#a9a9ab\] {
@@ -1812,15 +1815,6 @@
       }
     }
   }
-  .dark\:hover\:bg-gray-700 {
-    &:is(.dark *) {
-      &:hover {
-        @media (hover: hover) {
-          background-color: var(--color-gray-700);
-        }
-      }
-    }
-  }
   .dark\:hover\:bg-input\/50 {
     &:is(.dark *) {
       &:hover {
@@ -1829,6 +1823,15 @@
           @supports (color: color-mix(in lab, red, red)) {
             background-color: color-mix(in oklab, var(--input) 50%, transparent);
           }
+        }
+      }
+    }
+  }
+  .dark\:hover\:bg-neutral-700 {
+    &:is(.dark *) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: var(--color-neutral-700);
         }
       }
     }
@@ -1957,15 +1960,14 @@
   --sidebar-accent-foreground: oklch(0.21 0.034 264.665);
   --sidebar-border: oklch(0.928 0.006 264.531);
   --sidebar-ring: oklch(0.707 0.022 261.325);
-  --font-geist-sans: "Pretendard", system-ui, sans-serif;
-  --font-geist-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    monospace;
-  --font-family: "Pretendard", sans-serif;
+  --font-geist-sans: 'Pretendard', system-ui, sans-serif;
+  --font-geist-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-family: 'Pretendard', sans-serif;
 }
 .dark {
   --background: oklch(0.13 0.028 261.692);
   --foreground: oklch(0.985 0.002 247.839);
-  --card: oklch(0.21 0.034 264.665);
+  --card: var(--color-neutral-900);
   --card-foreground: oklch(0.985 0.002 247.839);
   --popover: oklch(0.21 0.034 264.665);
   --popover-foreground: oklch(0.985 0.002 247.839);
@@ -1994,7 +1996,7 @@
   --sidebar-accent-foreground: oklch(0.985 0.002 247.839);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
-  --font-family: "Pretendard", sans-serif;
+  --font-family: 'Pretendard', sans-serif;
 }
 @layer base {
   * {
@@ -2011,12 +2013,11 @@
 }
 html,
 body {
-  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui,
-    Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
-    sans-serif;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
+    'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
 }
 html.dark body {
-  background-color: #1a1a1f;
+  background-color: var(--color-neutral-900);
 }
 @property --tw-translate-x {
   syntax: "*";

@@ -161,7 +161,7 @@ export default function Navbar() {
     <header
       ref={navbarRef}
       style={{ '--navbar-height': '64px' } as React.CSSProperties}
-      className="w-full fixed top-0 left-0 z-50 bg-white dark:bg-[#1a1a1f] shadow dark:shadow-[0_1px_0_0_#a9a9ab]"
+      className="w-full fixed top-0 left-0 z-50 bg-white dark:bg-neutral-900  shadow dark:shadow-[0_1px_0_0_#a9a9ab]"
     >
       <div className="container mx-auto flex justify-between items-center p-4">
         <Link href="/" className="font-bold text-xl">
@@ -193,7 +193,7 @@ export default function Navbar() {
               {/* 드롭다운 메뉴 */}
               {openDropdown === item.title && item.subItems && (
                 <div
-                  className="absolute top-full right-0 mt-2 bg-white dark:bg-[#2c2c34] border dark:border-gray-600 rounded-lg shadow p-4 min-w-[200px] z-50"
+                  className="absolute top-full right-0 mt-2 bg-white dark:bg-neutral-800 border dark:border-neutral-600 rounded-lg shadow p-4 min-w-[200px] z-50"
                   onMouseLeave={() => setOpenDropdown(null)}
                 >
                   {item.subItems.map((year) => (
@@ -215,7 +215,7 @@ export default function Navbar() {
                               <Link
                                 key={month.title}
                                 href={month.href}
-                                className="p-2 text-sm rounded hover:bg-gray-100 dark:hover:bg-gray-700"
+                                className="p-2 text-sm rounded hover:bg-neutral-100 dark:hover:bg-neutral-700"
                               >
                                 {month.title}
                               </Link>
@@ -232,7 +232,7 @@ export default function Navbar() {
 
           <SearchModal
             trigger={
-              <Button variant="ghost" size="icon" className="text-gray-600 dark:text-gray-300">
+              <Button variant="ghost" size="icon" className="text-neutral-600 dark:text-neutral-300">
                 <Search className="w-4 h-4" />
               </Button>
             }
@@ -245,7 +245,7 @@ export default function Navbar() {
         <div className="flex lg:hidden items-center gap-2">
           <SearchModal
             trigger={
-              <Button variant="ghost" size="icon" className="text-gray-600 dark:text-gray-300">
+              <Button variant="ghost" size="icon" className="text-neutral-600 dark:text-neutral-300">
                 <Search className="w-4 h-4" />
               </Button>
             }
@@ -259,7 +259,7 @@ export default function Navbar() {
 
       {/* Mobile 메뉴 펼침 */}
       {isOpen && (
-        <div className="lg:hidden bg-white border-t shadow dark:bg-[#1a1a1f]">
+        <div className="lg:hidden bg-white border-t shadow dark:bg-neutral-900 ">
           <div className="flex flex-col p-4 gap-4">
             {navigationItems.map((item) => (
               <div key={item.title} className="flex flex-col">

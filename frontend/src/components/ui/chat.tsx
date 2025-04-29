@@ -33,13 +33,13 @@ export function Chat({
           <span className="font-semibold text-sm pb-2">{name}</span>
 
           {content && (
-            <div className="bg-gray-100 dark:bg-gray-800 p-3 rounded-lg rounded-tl-none max-w-xs text-sm">
+            <div className="bg-neutral-100 dark:bg-neutral-800 p-3 rounded-lg rounded-tl-none max-w-xs text-sm">
               {content}
             </div>
           )}
 
           {imageContent && (
-            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg rounded-tl-none max-w-xs">
+            <div className="bg-neutral-100 dark:bg-neutral-800 rounded-lg rounded-tl-none max-w-xs">
               <Image
                 src={imageContent}
                 alt="보낸 이미지"
@@ -51,7 +51,7 @@ export function Chat({
           )}
         </div>
 
-        <span className="text-[10px] text-gray-500 mt-auto self-end">
+        <span className="text-[10px] text-neutral-500 mt-auto self-end">
           {time}
         </span>
       </div>

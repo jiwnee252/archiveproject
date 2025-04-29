@@ -17,7 +17,7 @@ export function ChatCard({ children }: ArticleCardProps) {
     <div className="m-auto my-8">
       <Card className="w-[400px] shadow-md m-auto">
         <CardHeader className="text-center border-b">
-          <div className="w-full text-sm text-gray-500">
+          <div className="w-full text-sm text-neutral-500">
             {chatData.datetime}
           </div>
         </CardHeader>

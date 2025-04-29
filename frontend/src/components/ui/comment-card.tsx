@@ -1,21 +1,20 @@
-import * as React from "react";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import * as React from 'react'
+import Image from 'next/image'
+import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
   // CardFooter,
   CardHeader,
-} from "@/components/ui/card";
+} from '@/components/ui/card'
 
 export function CommentCard() {
   const commentData = {
-    profileImage: "/profile_images/profile.jpg",
-    name: "이름",
-    datetime: "2025-04-28 18:30",
-    content:
-      "안녕하세요 댓글입니다 댓글처음달아봅니다 안녕하시죠 배가고프네요 이건제댓글이고요 무플방지위원회 ",
-  };
+    profileImage: '/profile_images/profile.jpg',
+    name: '이름',
+    datetime: '2025-04-28 18:30',
+    content: '안녕하세요 댓글입니다 댓글처음달아봅니다 안녕하시죠 배가고프네요 이건제댓글이고요 무플방지위원회 ',
+  }
 
   return (
     <Card className="w-[400px] shadow-md m-auto">
@@ -32,20 +31,16 @@ export function CommentCard() {
                   className="rounded-full object-cover"
                   style={{ aspectRatio: 1 }}
                 />
-                <span className="font-semibold text-black text-sm">
-                  {commentData.name}
-                </span>
-                <span className="text-xs text-gray-500">
-                  {commentData.datetime}
-                </span>
+                <span className="font-semibold text-black text-sm">{commentData.name}</span>
+                <span className="text-xs text-neutral-500">{commentData.datetime}</span>
               </div>
             </div>
           </div>
         </div>
       </CardHeader>
       <CardContent>
-        <p className="text-gray-800 text-sm">{commentData.content}</p>
+        <p className="text-neutral-800 text-sm">{commentData.content}</p>
       </CardContent>
     </Card>
-  );
+  )
 }

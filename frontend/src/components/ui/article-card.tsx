@@ -12,7 +12,7 @@ export function ArticleCard({ children }: ArticleCardProps) {
     name: "이름",
     datetime: "2025-04-28 18:30",
     defaultContent: (
-      <p className="text-gray-800 text-sm">
+      <p className="text-neutral-800 text-sm">
         기본 댓글 내용입니다 기본 댓글 내용입니다 기본 댓글 내용입니다 기본 댓글
         내용입니다...
       </p>
@@ -34,7 +34,7 @@ export function ArticleCard({ children }: ArticleCardProps) {
                 style={{ aspectRatio: 1 }}
               />
               <span className="font-semibold text-black text-sm">글쓴이ww</span>
-              <span className="text-xs text-gray-500">2025-04-28 18:30</span>
+              <span className="text-xs text-neutral-500">2025-04-28 18:30</span>
             </div>
           </div>
         </CardHeader>
