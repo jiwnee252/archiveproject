@@ -21,35 +21,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/home/page.js"
     ],
-    "/guide/page": [
+    "/weverse/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/guide/page.js"
-    ],
-    "/login/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/login/page.js"
-    ],
-    "/bubble/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/bubble/page.js"
-    ],
-    "/bubble/[year]/[month]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/bubble/[year]/[month]/page.js"
-    ],
-    "/bubble/[year]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/bubble/[year]/page.js"
-    ],
-    "/bubble/[year]/[month]/[day]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/bubble/[year]/[month]/[day]/page.js"
+      "static/chunks/app/weverse/page.js"
     ]
   }
 }

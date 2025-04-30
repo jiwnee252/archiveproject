@@ -1729,11 +1729,6 @@
       border-color: var(--color-neutral-600);
     }
   }
-  .dark\:bg-\[\#2c2c34\] {
-    &:is(.dark *) {
-      background-color: #2c2c34;
-    }
-  }
   .dark\:bg-destructive\/60 {
     &:is(.dark *) {
       background-color: var(--destructive);

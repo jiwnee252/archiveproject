@@ -4,6 +4,8 @@ import * as React from "react";
 import { Calendar } from "@/components/ui/calendar";
 import { CommentCard } from "@/components/ui/comment-card";
 import { ArticleCard } from "@/components/ui/article-card";
+import { MomentCard } from "@/components/ui/moment-card";
+import { BubblePagination } from "@/components/ui/bubble-pagination";
 
 export default function BubbleDayPage() {
   return (
@@ -24,10 +26,12 @@ export default function BubbleDayPage() {
       </ArticleCard>
       <br></br>
       <CommentCard>wowwwww댓글</CommentCard>
+      <MomentCard>mmmmmm</MomentCard>
       <br></br>
       <CommentCard>wowwwww댓글</CommentCard>
       <br></br>
       <CommentCard>wowwwww댓글</CommentCard>
+      <BubblePagination />
     </div>
   );
 }
