@@ -1,29 +1,28 @@
 // components/ui/chat-card.tsx
-"use client";
+'use client'
 
-import * as React from "react";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import * as React from 'react'
+import { Card, CardContent, CardHeader } from '@/components/ui/card'
 
 interface ArticleCardProps {
-  children?: React.ReactNode;
+  children?: React.ReactNode
 }
 
-export function ChatCard({ children }: ArticleCardProps) {
-  const chatData = {
-    datetime: "2025-04-28",
-  };
+interface ArticleCardProps {
+  children?: React.ReactNode
+  date?: string // 여기에 date prop 추가
+}
 
+export function ChatCard({ children, date }: ArticleCardProps) {
   return (
     <div className="m-auto my-8">
-      <Card className="w-[400px] shadow-md m-auto">
-        <CardHeader className="text-center border-b">
-          <div className="w-full text-sm text-neutral-500">
-            {chatData.datetime}
-          </div>
-        </CardHeader>
+      <Card className="w-[330px] sm:w-[400px] max-w-full m-auto shadow-md">
+        <CardHeader className="text-sm text-neutral-500">{date}</CardHeader>
 
-        <CardContent className="p-4">{children}</CardContent>
+        <CardContent>
+          <div>{children}</div>
+        </CardContent>
       </Card>
     </div>
-  );
+  )
 }

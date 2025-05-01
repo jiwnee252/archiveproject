@@ -11,20 +11,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
     ],
-    "/page": [
+    "/bubble/[year]/[month]/[day]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/bubble/[year]/[month]/[day]/page.js"
     ],
-    "/home/page": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/home/page.js"
-    ],
-    "/weverse/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/weverse/page.js"
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }
