@@ -133,6 +133,7 @@ celerybeat.pid
 
 # Environments
 .env
+.env.local
 .venv
 env/
 venv/
@@ -593,3 +594,6 @@ pyvenv.cfg
 pip-selfcheck.json
 
 # End of https://www.toptal.com/developers/gitignore/api/django,nextjs,react,reactnative,python,firebase,remix,remix+vercel,remix+netlify,remix+cloudflarepages,venv
+
+
+/withRemotePatterns.ts
